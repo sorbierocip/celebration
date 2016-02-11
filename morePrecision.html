@@ -1,0 +1,75 @@
+<html>
+	<head>
+<style>
+P { text-align: center }
+</style>
+<script src="please.js"></script>
+<script>
+
+ function invert(r, g, b){r = 255-r, g = 255-g, b=255-b; return {'r':r,'g':g,'b':b}}
+function calcDate(date1,date2) {
+    var diff = Math.floor(date1.getTime() - date2.getTime());
+    var day = 1000 * 60 * 60 * 24;
+
+    var days = Math.floor(diff/day);
+    var months = Math.floor(days/31);
+    var years = Math.floor(months/12);
+
+
+    var message = "Faz "
+    message += days + " dias ou " 
+    message += months + " meses ou "
+    message += years + " anos"
+
+    return message
+    }
+
+
+a = calcDate(today,past)
+function load(){
+document.getElementById("years").innerHTML = new Date(new Date - new Date('2011-02-11')).getFullYear()-1970 + " anos, ";
+document.getElementById("years").innerHTML += new Date(new Date - new Date('2011-02-11')).getMonth() + " meses e ";
+document.getElementById("years").innerHTML += new Date(new Date - new Date('2011-02-11')).getDate() + " dias ";
+document.getElementById("description").innerHTML = calcDate(new Date(), new Date('2011-02-11'));
+document.getElementById("name").innerHTML = "Jéssica";
+var colors = Please.make_color({
+	colors_returned: 2,
+golden: false, 
+	full_random: true 
+});
+document.body.style.background =  colors[0];
+document.body.style.color = colors[1];
+
+}
+</script>
+	</head>
+	<body onload="load()">
+<br>
+<b><p id="name"  style="font-size:24px">Jéssica</p></b>
+<br>
+		<p  style="font-size:44px"> Feliz Aniversário de Casamento!!</p>
+<p  style="font-size:12px">
+<br>
+São <span id="years">5</span> juntos contigo!
+</br>
+
+<br>
+<span id="description">5</span> que estamos juntos!
+</br>
+
+</br>
+<br>
+Onde você me fez muito feliz.
+</br>
+<br>
+E que sem você eu não me sinto completo
+</br>
+</p>
+</br>
+<p  style="font-size:24px" >Te Amo Muito</p>
+<br></br>
+<br></br>
+<br></br>
+
+	</body>
+</html>
