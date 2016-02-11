@@ -1,0 +1,46 @@
+<html>
+	<head>
+<style>
+P { text-align: center }
+H2 { text-align: center }
+
+</style>
+<script src="please.js"></script>
+<script>
+
+ function invert(r, g, b){r = 255-r, g = 255-g, b=255-b; return {'r':r,'g':g,'b':b}}
+function load(){
+document.getElementById("years").innerHTML = new Date(new Date - new Date('2011-02-11')).getFullYear()-1970;
+document.getElementById("name").innerHTML = "Jéssica";
+var colors = Please.make_color({
+	colors_returned: 2,
+golden: false, 
+	full_random: true 
+});
+document.body.style.background =  colors[0];
+document.body.style.color = colors[1];
+
+}
+</script>
+	</head>
+	<body onload="load()">
+<br>
+<b><p id="name">Jéssica</p></b>
+<br>
+		<h2> Feliz Aniversário de Casamento!!</h2>
+<p>
+<br>
+São <span id="years">5</span> anos juntos contigo!
+</br>
+<br>
+Onde você me fez muito feliz.
+</br>
+<br>
+E que sem você eu não me sinto completo
+</br>
+</p>
+</br>
+<h2>Te Amo Muito</h2>
+
+	</body>
+</html>
